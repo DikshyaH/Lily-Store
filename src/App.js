@@ -1,23 +1,49 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+// import './categories.styles.scss';
+
+import AllCategoriesHolder from './components/all-categories/all-categories.component';
+
+import DressesImage from './images/Dresses.jpg';
+import ShoesImage from './images/Shoes.jpg';
+import BagsImage from './images/Bags.jpg';
+import AccessoriesImage from './images/Accessories.jpg'
+import HomeDecor from './images/HomeDecor.jpg'
+
+const App = () => {
+  const categories = [
+    {
+      title : 'Shoes',
+      id : '1',
+      imageURL : ShoesImage
+    },
+    {
+      title : 'Dresses',
+      id : '2',
+      imageURL : DressesImage
+    },
+    {
+      title : 'Bags',
+      id : '3',
+      imageURL : BagsImage
+    },
+    {
+      title : 'Accessories',
+      id : '4',
+      imageURL : AccessoriesImage
+    },
+    {
+      title : 'Home Decor',
+      id : '5',
+      imageURL : HomeDecor
+    }
+
+  ]
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AllCategoriesHolder categories = {categories}></AllCategoriesHolder>
     </div>
   );
 }
