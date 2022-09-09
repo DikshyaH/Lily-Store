@@ -1,51 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from './route/home/home.component.jsx';
+import {Routes, Route} from 'react-router-dom' ;
+import Navigation from './components/navigation-bar/navigation.component.jsx';
 
-// import './categories.styles.scss';
-
-import AllCategoriesHolder from './components/all-categories/all-categories.component';
-
-import DressesImage from './images/Dresses.jpg';
-import ShoesImage from './images/Shoes.jpg';
-import BagsImage from './images/Bags.jpg';
-import AccessoriesImage from './images/Accessories.jpg'
-import HomeDecor from './images/HomeDecor.jpg'
+const Shop=()=>{
+  return(
+    <div>This is the shop page</div>
+  )
+}
 
 const App = () => {
-  const categories = [
-    {
-      title : 'Shoes',
-      id : '1',
-      imageURL : ShoesImage
-    },
-    {
-      title : 'Dresses',
-      id : '2',
-      imageURL : DressesImage
-    },
-    {
-      title : 'Bags',
-      id : '3',
-      imageURL : BagsImage
-    },
-    {
-      title : 'Accessories',
-      id : '4',
-      imageURL : AccessoriesImage
-    },
-    {
-      title : 'Home Decor',
-      id : '5',
-      imageURL : HomeDecor
-    }
-
-  ]
-  
   return (
-    <div className="App">
-      <AllCategoriesHolder categories = {categories}></AllCategoriesHolder>
-    </div>
-  );
-}
+    <Routes>
+    <Route path ='/' element={<Navigation/>}>
+      <Route index element={<Home />}></Route>
+      <Route path='shop' element ={<Shop/>}></Route>
+    </Route>
+    </Routes>
+  ); 
+};
 
 export default App;

@@ -42,7 +42,7 @@
     }
   
     .category-container-body {
-      height: 90px;
+      height: 150px;
       padding: 0 25px;
       display: flex;
       flex-direction: column;
@@ -63,6 +63,7 @@
       p {
         font-weight: lighter;
         font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
       }
     }
   }
