@@ -1,15 +1,20 @@
 import { Fragment } from 'react';
 import { Outlet,Link } from 'react-router-dom';
 
-import './navigation.style.scss';
+import './navigation.styles.scss';
+
+import LogoIcon from '../../images/lily.png';
+import {ReactComponent as ShoppingCart} from '../../images/shopping-cart.svg'
 
 const Navigation =() =>{
     return(
       <Fragment>
         <div className='navigation'>
-            <Link className='logo' to='/'>Logo</Link>
+            <Link className='logo-icon' to='/'><img src={LogoIcon} alt='logo'/>The Lily Store</Link>
             <div className='nav-links'>
-                <Link className='nav-link-shop' to='shop'>SHOP</Link>
+                <Link className='nav-link-contact' to='contact-us'>Contact</Link>
+                <Link className='nav-link-signIn' to='signIn'>Sign In</Link>
+                <Link className='nav-link-shoppingbag' to='shopping-bag'><ShoppingCart/></Link>
             </div>
         </div>
         <Outlet/>

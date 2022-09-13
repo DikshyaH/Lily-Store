@@ -8,8 +8,8 @@ import AllCategoriesHolder from '../../components/all-categories/all-categories.
 import DressesImage from '../../images/Dresses.jpg';
 import ShoesImage from '../../images/Shoes.jpg';
 import BagsImage from '../../images/Bags.jpg';
-import AccessoriesImage from '../../images/Accessories.jpg'
-import HomeDecor from '../../images/HomeDecor.jpg'
+import AccessoriesImage from '../../images/Accessories.jpg';
+import HomeDecor from '../../images/HomeDecor.jpg';
 
 import { Outlet } from 'react-router-dom';
 

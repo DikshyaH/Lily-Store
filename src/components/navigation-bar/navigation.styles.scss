@@ -1,0 +1,45 @@
+.navigation {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+
+  .logo-icon {
+    padding: 2px 11px;
+    font-size: xx-large;
+    font-weight: bolder;
+    display: block;
+  }  
+
+  .nav-links {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family:'Courier New', Courier, monospace;
+    font-style: bold;
+    
+
+    .nav-link-contact{
+      padding: 33px 25px;
+      cursor: pointer;
+      margin-top: 38px;
+
+    }
+
+    .nav-link-signIn {
+      padding: 33px 25px;
+      cursor: pointer;
+      margin-top: 38px;
+
+    }
+    .nav-link-shoppingbag {
+      padding: 33px 25px;
+      cursor: pointer;
+      margin-top: 38px;
+
+    }
+  }
+}
