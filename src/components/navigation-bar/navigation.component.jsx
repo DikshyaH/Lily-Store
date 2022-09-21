@@ -13,7 +13,7 @@ const Navigation =() =>{
             <Link className='logo-icon' to='/'><img src={LogoIcon} alt='logo'/>The Lily Store</Link>
             <div className='nav-links'>
                 <Link className='nav-link-contact' to='contact-us'>Contact</Link>
-                <Link className='nav-link-signIn' to='signIn'>Sign In</Link>
+                <Link className='nav-link-signIn' to='sign-in'>Sign In</Link>
                 <Link className='nav-link-shoppingbag' to='shopping-bag'><ShoppingCart/></Link>
             </div>
         </div>
