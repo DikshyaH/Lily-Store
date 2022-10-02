@@ -10,7 +10,8 @@ const Navigation =() =>{
     return(
       <Fragment>
         <div className='navigation'>
-            <Link className='logo-icon' to='/'><img src={LogoIcon} alt='logo'/>The Lily Store</Link>
+            <Link className='logo-icon' to='/'><img src={LogoIcon} alt='logo'/></Link>
+            <Link className='store-name' to='/'>The Lily Store</Link>
             <div className='nav-links'>
                 <Link className='nav-link-contact' to='contact-us'>Contact</Link>
                 <Link className='nav-link-signIn' to='sign-in'>Sign In</Link>
