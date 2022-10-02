@@ -49,7 +49,7 @@ export const createUserDocumentFromAuth = async(customerAuth) => {
       });
     }
     catch(error){
-      console.log('error while creating cuatomer through Google Sign In', error.message);
+      console.log('error while creating customer through Google Sign In', error.message);
       }
 
     }
