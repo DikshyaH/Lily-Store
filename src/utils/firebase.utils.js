@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 
-import { getAuth ,GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth ,GoogleAuthProvider, signInWithPopup ,createUserWithEmailAndPassword} from "firebase/auth";
 
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 
@@ -32,7 +32,7 @@ export const signInWithGooglePopUp = () => signInWithPopup(auth, provider);
 
 export const db = getFirestore();
 
-export const createUserDocumentFromAuth = async(customerAuth) => { 
+export const createUserDocumentFromAuth = async(customerAuth, additionalInformation = {}) => { 
   const customerDocRef = doc(db,"customer",customerAuth.uid);
 
   const customerSnapShot = await getDoc(customerDocRef);
@@ -45,16 +45,23 @@ export const createUserDocumentFromAuth = async(customerAuth) => {
       await setDoc(customerDocRef,{
         displayName,
         email,
-        createdAt
+        createdAt,
+        ...additionalInformation
       });
     }
     catch(error){
-      console.log('error while creating customer through Google Sign In', error.message);
+      console.log('error while creating customerin Firebase', error.message);
       }
 
     }
     
   return customerDocRef;  
+}
+
+export const createRegularUserDocument = async(email, password) =>{
+  if(!email || !password) return;
+  
+  return createUserWithEmailAndPassword(auth, email, password);
 }
   
 
